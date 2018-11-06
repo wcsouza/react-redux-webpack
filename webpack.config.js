@@ -1,6 +1,6 @@
 const webpack = require('webpack');
 
-module.exports = {
+const webpackConfig = {
     entry: './src/index.jsx',
     output: {
         path: __dirname + '/public',
@@ -25,9 +25,9 @@ module.exports = {
                     }
                 },
                 exclude: '/node_modules/',
-
             }
-
         ]
     }
 }
+
+module.exports = webpackConfig;

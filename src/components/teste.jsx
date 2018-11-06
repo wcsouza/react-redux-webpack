@@ -15,11 +15,20 @@ class Teste extends Component {
 
     render() {
         return (
-            <div>
-                <h1>Valor: {this.props.valor}</h1>
-                <input type="text" value={this.state.inputValue} onChange={this.onChangeInput} />
-                <br />
-                <button onClick={this.handleEvent}>Alterar Valor</button>
+            <div className="container">
+                <div className="row">
+                    <div className="col-sm-12">
+                        <h1>Valor: {this.props.valor}</h1>
+                    </div>
+                </div>
+                <div className="row">
+                    <div className="col-sm-6">
+                        <input type="text" className="form-control" value={this.state.inputValue} onChange={this.onChangeInput} />
+                    </div>
+                    <div className="col-sm-3">
+                        <button class="btn btn-primary" onClick={this.handleEvent}>Alterar Valor</button>
+                    </div>
+                </div>
             </div>
         );
     }
